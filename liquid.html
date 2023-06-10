@@ -1,0 +1,139 @@
+{% stylesheet %}
+  body {
+    margin: 0;
+  }
+
+  .how-it-works-section {
+    background-color: rgb(0, 155, 245);
+    padding: 40px 50px;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
+  .title {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-section {
+    font-family: sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    position: relative;
+  }
+
+  .top-line-div {
+    height: 1px;
+    width: 170px;
+    background-color: white;
+    justify-content: center;
+    position: absolute;
+    top: 23%;
+    right: 44%;
+  }
+
+  .desc-title {
+    margin-top: -20px;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .bottom-line-div {
+    height: 1px;
+    width: 170px;
+    background-color: white;
+    position: absolute;
+    top: 28%;
+    right: 44%;
+  }
+
+  .imgs-row {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 10px;
+  }
+
+  .img-title {
+    font-family: sans-serif;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 300;
+  }
+
+  .img-desc {
+    font-family: sans-serif;
+    font-size: 15px;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "testing-section",
+  "settings": []
+}
+{% endschema %}
+
+{% assign imageDetails = [
+  {
+    "image": "https://cdn.shopify.com/s/files/1/0730/1500/1405/files/IMG_2283_85262e32-718f-4f3a-b135-96ce0cd00935.jpg?v=1686335337",
+    "title": "PLACE AN ORDER",
+    "description": "Set pickup and delivery times on our site or in our app."
+  }
+  {
+    "image": "https://cdn.shopify.com/s/files/1/0730/1500/1405/files/IMG_2284_59214daa-5a75-4266-8a6d-fc522a2053e7.jpg?v=1686335337",
+    "title": "WE COME TO YOU",
+    "description": "We'll pick up your dirty laundry at the time you request."
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/0730/1500/1405/files/IMG_2282_2c911a9c-13b9-4855-a84f-ea67d13854c5.jpg?v=1686335338",
+    "title": "LIVE YOUR LIFE",
+    "description": "Make the most of the time you're saving!"
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/0730/1500/1405/files/IMG_2280_a8abc168-950b-4a2d-8a4c-ca889cd36294.png?v=1686335338",
+    "title": "WE BRING THEM BACK",
+    "description": "We bring your clean clothes back, folded and fresh."
+  }
+
+] %}
+
+<div class="imgs-row">
+  {% for item in imageDetails %}
+  <div class="img-con1">
+    <img src="{{ item.image | img_url }}" alt="{{ item.title }}" width="285px" height="190px">
+    <h2 class="img-title">{{ item.title }}</h2>
+    <p class="img-desc">{{ item.description }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="how-it-works-section">
+   <div class="imgs-row">
+      {% for item in imageDetails %}
+        <div class="img-con1">
+          <img src="{{ item.image | img_url }}" alt="{{ item.title }}" width="285px" height="190px">
+          <h2 class="img-title">{{ item.title }}</h2>
+          <p class="img-desc">{{ item.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Any additional HTML content or Liquid code -->
+</body>
+</html>
