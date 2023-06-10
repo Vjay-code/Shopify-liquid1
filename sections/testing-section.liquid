@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+        margin: 0;
+    }
+
+    .how-it-works-section {
+        background-color: rgb(0, 155, 245);
+        padding: 40px 50px;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .title {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-section {
+        font-family: sans-serif;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 300;
+        position: relative;
+    }
+
+    .top-line-div {
+        height: 1px;
+        width: 170px;
+        background-color: white;
+        justify-content: center;
+        position: absolute;
+        top: 23%;
+        right: 44%;
+    }
+
+    .desc-title {
+        margin-top: -20px;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .bottom-line-div {
+        height: 1px;
+        width: 170px;
+        background-color: white;
+        position: absolute;
+        top: 28%;
+        right: 44%;
+    }
+
+    .imgs-row {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 50px;
+        padding-right: 50px;
+        gap: 10px;
+    }
+
+    .img-title {
+        font-family: sans-serif;
+        font-size: 24px;
+        line-height: 38px;
+        font-weight: 300;
+    }
+
+    .img-desc {
+        font-family: sans-serif;
+        font-size: 15px;
+    }
+  </style>
+
+  <body>
+    {% schema %} { "name": "testing-section", "settings": [] } {% endschema %}
+
+    <div class="how-it-works-section">
+      <div class="title">
+        <h2 class="title-section">How It Works</h2>
+        <div class="top-line-div"></div>
+        <p class="desc-title">Four Simple Steps</p>
+        
+        <div class="bottom-line-div"></div>
+      </div>
+      <div class="imgs-row">
+        <div class="img-con1">
+            <img src="img/clean1.jpeg" alt="No image to display" width="285px" height="190px">
+            <h2 class="img-title">PLACE AN ORDER</h2>
+            <p class="img-desc">Set pickup and delivery times on our site or in our app</p>
+        </div>
+
+        <div class="img-con1">
+            <img src="img/clean2.jpeg" alt="No image to display" width="285px" height="190px">
+            <h2 class="img-title">WE COME TO YOU</h2>
+            <p class="img-desc">We'll pick up your dirty laundry at the time you request.</p>
+        </div>
+
+        <div class="img-con1">
+            <img src="img/clean3.jpeg" alt="No image to display" width="285px" height="190px">
+            <h2 class="img-title">LIVE YOUR LIFE</h2>
+            <p class="img-desc">Make the most of the time you're saving!</p>
+        </div>
+
+        <div class="img-con1">
+            <img src="img/clean5.jpeg" alt="No image to display" width="285px" height="190px">
+            <h2 class="img-title">WE BRING THEM BACK</h2>
+            <p class="img-desc">We bring your clean clothes back, folded and fresh.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
